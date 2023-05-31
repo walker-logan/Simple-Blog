@@ -1,1 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+:root {
+  --black: #202020;
+  --gray: #7e7e7e;
+  --gray-light: #e4e4e4;
+  --blue: #001536;
+  --font-size-base: 1rem;
+  /* clamping for window size */
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-XL: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --border-radius: 10px;
+}
+
+ body {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--black);
+  font-size: var(--font-size-base);
+  background-color: #faf5ee;
+  background-image: url(/img/cardboard-texture.jpg);
+  margin: 0;
+ }
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="search"],
+ select,
+ textarea {
+  font-family: 'Roboto Mono', monospace;
+  font-size: var(--font-size-base);
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+ }
+
+ .btn {
+  background-color: var(--black);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
+
+.btn-delete {
+  padding: 10px 15px;
+  background-color: var(--blue);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+.hero-image {
+  max-height: 550;
+  filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+/* main header */
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 10px;
+  grid-template-areas: 
+  "logo button"
+  "menu menu"
+  ;
+}
+
+.header__logo {
+  grid-area: logo;
+  font-weight: 800;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.header__logo:hover {
+  text-decoration: underline;
+}
+
+.header__nav {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+}
+
+.header__button {
+  grid-area: button;
+  display: flex;
+  justify-content: end;
+}
