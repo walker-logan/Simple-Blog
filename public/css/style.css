@@ -1,5 +1,8 @@
+/* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100&display=swap");
 
+/* ----------------------------------------------------- */
+/* roots and other things */
 :root {
   --black: #202020;
   --gray: #7e7e7e;
@@ -71,6 +74,7 @@ img {
   height: auto;
 }
 
+/* ----------------------------------------------------- */
 /* layout */
 .container {
   max-width: 800px;
@@ -89,6 +93,7 @@ img {
   border-radius: var(--border-radius);
 }
 
+/* ----------------------------------------------------- */
 /* main header */
 .header {
   display: grid;
@@ -171,6 +176,7 @@ img {
   color: var(--gray);
 }
 
+/* ----------------------------------------------------- */
 /* author homepage */
 .author {
   padding: 10px 0;
@@ -190,9 +196,9 @@ img {
 }
 
 /* articles */
-.article__heading {
+.articles__heading {
   margin-top: 4rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .article-ul {
@@ -205,10 +211,11 @@ img {
 }
 
 .article-list__date {
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   color: var(--gray);
-  width: 260px;
+  width: 100px;
   display: inline-block;
+  width: 260px;
 }
 
 .article-ul li a {
@@ -240,37 +247,24 @@ img {
   border-bottom: 1px solid var(--gray-light);
 }
 
-.article-ul lihover {
+.article-ul li:hover {
   filter: none;
 }
 
 .article-ul:hover li {
-  filter: blur(3s);
+  filter: blur(3px);
 }
 
 .article-ul:hover li:hover {
   filter: none;
 }
 
-.pagination {
-  font-size: 1.3rem;
-  color: var(--gra);
-  text-decoration: none;
-  margin-top: 40px;
-  display: inline-block;
-}
-
-.pagination:hover {
-  color: var(--black);
-}
-
 .article {
   white-space: pre-wrap;
 }
 
-
+/* ----------------------------------------------------- */
 /* footer */
-
 .footer {
   margin: 4rem;
   text-align: center;
